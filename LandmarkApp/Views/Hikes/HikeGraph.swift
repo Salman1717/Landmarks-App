@@ -1,11 +1,18 @@
-/*
-See LICENSE folder for this sample’s licensing information.
 
-Abstract:
-The elevation, heart rate, and pace of a hike plotted on a graph.
-*/
+
+//Abstract:
+//The elevation, heart rate, and pace of a hike plotted on a graph.
+//*/
 
 import SwiftUI
+
+extension Animation {
+    static func ripple(index: Int) -> Animation{
+        Animation.spring(dampingFraction: 0.5)
+            .speed(2.0)
+            .delay( 0.03 * Double(index))
+    }
+}
 
 struct HikeGraph: View {
     var hike: Hike
